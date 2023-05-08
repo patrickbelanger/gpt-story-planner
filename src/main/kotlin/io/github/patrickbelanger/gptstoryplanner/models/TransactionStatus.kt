@@ -17,27 +17,11 @@
 
 package io.github.patrickbelanger.gptstoryplanner.models
 
-import io.github.patrickbelanger.gptstoryplanner.models.type.Gender
-import io.github.patrickbelanger.gptstoryplanner.models.type.Relationship
-import io.github.patrickbelanger.gptstoryplanner.models.type.SkinColor
-import java.time.LocalDate
+import org.springframework.http.HttpStatus
 
-data class Character(
-    val id: Long,
-    val firstName: String,
-    val lastName: String,
-    val gender: Gender,
-    val genderDescription: String,
-    val dateOfBirth: LocalDate,
-    val profession: String,
-    val relationship: Relationship,
-    val relationshipWith: Long,
-    val skinColor: SkinColor
-) {
-    companion object {
-        val REQUIRED_MEMBERS = listOf(
-            "firstName",
-            "lastName"
-        )
-    }
-}
+data class TransactionStatus<T>(
+    val response: T,
+    val httpStatus: HttpStatus = HttpStatus.OK,
+    val errorMessage: String? = null,
+    val errorFields: List<String> = mutableListOf()
+)

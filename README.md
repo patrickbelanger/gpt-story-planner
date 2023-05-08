@@ -32,7 +32,7 @@ To contribute to this project, please follow the steps below:
 * Create a pull request from your fork to the main repository
 
 # License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the Apache License 2.0. See the LICENSE file for more details.
 
 Acknowledgements
 ChatGPT by OpenAI
