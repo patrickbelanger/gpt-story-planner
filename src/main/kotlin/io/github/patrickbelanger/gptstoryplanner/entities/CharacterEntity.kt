@@ -20,15 +20,11 @@ package io.github.patrickbelanger.gptstoryplanner.entities
 import io.github.patrickbelanger.gptstoryplanner.models.type.Gender
 import io.github.patrickbelanger.gptstoryplanner.models.type.Relationship
 import io.github.patrickbelanger.gptstoryplanner.models.type.SkinColor
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Table
-import org.springframework.data.annotation.Id
+import jakarta.persistence.*
 import java.time.LocalDate
 
 @Entity
-@Table(name = "persons")
+@Table(name = "characters")
 data class CharacterEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
